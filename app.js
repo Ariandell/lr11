@@ -11,7 +11,7 @@ $(document).ready(function() {
         { word: 'bonfire', translation: 'багаття', image: 'bonfire.png' },
         { word: 'flower', translation: 'квітка', image: 'flower.png' },
     ];
-    document.getElementById('background-music').volume = 0.07;
+    document.getElementById('background-music').volume = 0.02;
     var totalWords = words.length;
     var currentWord = null;
     var correctCount = 0;
@@ -72,4 +72,9 @@ $(document).ready(function() {
     });
     var timer = setInterval(updateTimer, 1000);
     nextWord();
+    $('#start-button').on('click', function() {
+        $('#start-screen').hide();
+        $('#app').show();
+        document.getElementById('background-music').play();
+    });
 });
