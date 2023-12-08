@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Вивчення мови</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+    <video id="bg-video" autoplay loop muted>
+        <source src="bg_v3.mp4" type="video/mp4">
+    </video>
+    <div id="app">
+        <div id="timer"></div>
+        <div id="progress-bar">
+            <div id="progress"></div>
+        </div>
+        <div id="card" class="flip-card">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <div id="word"></div>
+                </div>
+                <div class="flip-card-back">
+                    <img id="image">
+                    <div id="back-cover"></div>
+                </div>
+            </div>
+        </div>
+        <input id="translation" type="text" placeholder="Введіть переклад">
+        <div id="result" style="display: none;">
+            <p>Правильно: <span id="correct"></span></p>
+            <p>Неправильно: <span id="incorrect"></span></p>
+        </div>
+    </div>
+    <audio id="background-music" src="bgmusic.mp3" autoplay loop></audio>
+    <audio id="correct-sound" src="correct.mp3"></audio>
+    <audio id="incorrect-sound" src="incorrect.mp3"></audio>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
