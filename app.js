@@ -12,15 +12,15 @@ $(document).ready(function() {
         { word: 'flower', translation: 'квітка', image: 'flower.png' },
     ];
     document.getElementById('background-music').volume = 0.02;
-    var totalWords = words.length;
-    var currentWord = null;
-    var correctCount = 0;
-    var incorrectCount = 0;
-    var timeLeft = 5 * 60;
+    let totalWords = words.length;
+    let currentWord = null;
+    let correctCount = 0;
+    let incorrectCount = 0;
+    let timeLeft = 5 * 60;
 
     function updateTimer() {
-        var minutes = Math.floor(timeLeft / 60);
-        var seconds = timeLeft % 60;
+        let minutes = Math.floor(timeLeft / 60);
+        let seconds = timeLeft % 60;
         $('#timer').text(minutes + ':' + (seconds < 10 ? '0' : '') + seconds);
         timeLeft--;
         if (timeLeft < 0) {
@@ -70,7 +70,7 @@ $(document).ready(function() {
             }, 3000); 
         }
     });
-    var timer = setInterval(updateTimer, 1000);
+    let timer = setInterval(updateTimer, 1000);
     nextWord();
     $('#start-button').on('click', function() {
         $('#start-screen').hide();
